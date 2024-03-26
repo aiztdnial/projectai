@@ -18,9 +18,9 @@ def main():
     user_prompt = st.text_area('Enter a prompt for the story:')
     if st.button('Generate Story:'):
         
-        story =sm.story_ai(user_prompt)
-        design =sm.design_ai(story)
-        image_url =sm.cover_ai(design)
+        story =sm.story_ai(user_prompt,client)
+        design =sm.design_ai(story,client)
+        image_url =sm.cover_ai(design,client)
         
         st.image(image_url, caption='Generated Cover Image', use_column_width=True)
         
