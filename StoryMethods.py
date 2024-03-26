@@ -5,8 +5,8 @@ class StoryMethods:
             model="gpt-3.5-turbo",
             messages=[{
                 "role": "system", 
-                "content": """You are a bestseller story writer.
-                            You'll take user's prompt and generate a 100 words shortstory for children age 8-10"""
+                "content": """You are a professional hairstyler and fashion designer.
+                            You'll take user's prompt and give an advice to user about hairstyle based on their face structure and fashion that are suitable for them for a certain occasion."""
                 },
                 {
                 "role": "user", 
@@ -26,7 +26,7 @@ class StoryMethods:
 
         cover_response = client.images.generate(
         model="dall-e-3",
-        prompt=f"{msg} in ghlibli style",
+        prompt=f"{msg} real life style",
         size="1024x1024",
         quality="standard",
         n=1,
@@ -44,10 +44,10 @@ class StoryMethods:
             messages=[{
                 
                 "role": "system", 
-                "content": """Base on the story given. 
-                            You will design a detailed image prompt for the cover image of this story.
-                            The image prompt should include theme of the story with relevant color,
-                            suitable for children book.
+                "content": """Based on the criteria given. 
+                            You will design a detailed image prompt based on user's face structure.
+                            The image prompt should include the hairstyle that suitable for them,
+                            outfit based on you have advised.
                             The output should be within 100 characters"""
                 },
                 {

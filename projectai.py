@@ -12,10 +12,10 @@ client = OpenAI(
 def main():
     
     # Streamlit app layout
-    st.title('Children Story Generator')
+    st.title('Outfit Idea Generator')
 
     # User input for story generation
-    user_prompt = st.text_area('Enter a prompt for the story:')
+    user_prompt = st.text_area('Enter your face shape and the occasion that you plan to go:')
     if st.button('Generate Story:'):
         
         story =sm.story_ai(user_prompt,client)
