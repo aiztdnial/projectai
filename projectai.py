@@ -15,21 +15,21 @@ def main():
     st.title('Outfit Idea Generator For Men')
 
     # User input for story generation
-    user_prompt = st.text_area('Enter your face shape and the occasion that you plan to go:')
-    if st.button('Generate Story:'):
+    user_prompt = st.text_area('Provide your face shape and hair length. Then provide the occasion that you need to go:')
+    if st.button('Generate:'):
         
         story =sm.story_ai(user_prompt,client)
         design =sm.design_ai(story,client)
         image_url =sm.cover_ai(design,client)
         
-        st.image(image_url, caption='Generated Cover Image', use_column_width=True)
+        st.image(image_url, caption='Style Example', use_column_width=True)
         
         st.write('Generated Image Prompt:')
         st.write(design)
         
         st.divider()
         
-        st.write('Generated Story:')
+        st.write('Advised:')
         st.write(story)
 
 
