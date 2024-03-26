@@ -12,7 +12,7 @@ client = OpenAI(
 def main():
     
     # Streamlit app layout
-    st.title('Outfit Idea Generator')
+    st.title('Outfit Idea Generator For Men')
 
     # User input for story generation
     user_prompt = st.text_area('Enter your face shape and the occasion that you plan to go:')
