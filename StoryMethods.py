@@ -32,7 +32,7 @@ class StoryMethods:
         n=1,
         )
 
-        uploaded_files = cover_response.data[0].url
+        image_url = cover_response.data[0].url
         #display(Image(url=image_url))
 
         return image_url
