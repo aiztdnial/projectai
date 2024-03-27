@@ -32,10 +32,10 @@ class StoryMethods:
         n=1,
         )
 
-        image_url = cover_response.data[0].url
+        uploaded_files = cover_response.data[0].url
         #display(Image(url=image_url))
 
-        return image_url
+        return uploaded_files
     
     def design_ai(msg,client):
         
