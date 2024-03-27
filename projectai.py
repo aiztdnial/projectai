@@ -24,7 +24,7 @@ def main():
         
         st.image(image_url, caption='Style Example', use_column_width=True)
         
-        st.write('Generated Image Prompt:')
+        st.write('Suggestion:')
         st.write(design)
         
         st.divider()
