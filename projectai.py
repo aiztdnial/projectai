@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from IPython.display import Image
 import streamlit as st
 from StoryMethods import StoryMethods as sm
+import time
 
 client = OpenAI(
     api_key=st.secrets["OPENAI_API_KEY"]
@@ -17,6 +18,16 @@ def main():
     # User input for story generation
     user_prompt = st.text_area('Provide your face shape and hair length. Then provide the occasion that you need to go:')
     if st.button('Generate:'):
+        
+        with st.status("Generate data..."):
+            st.write("Generating...")
+            time.sleep(2)
+            st.write("Sabar Jap...")
+            time.sleep(1)
+            st.write("Sikit lagi...")
+            time.sleep(1)
+
+        st.button('Rerun')
         
         story =sm.story_ai(user_prompt,client)
         design =sm.design_ai(story,client)
