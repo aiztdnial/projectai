@@ -27,9 +27,9 @@ def main():
         
         story =sm.story_ai(user_prompt,client)
         design =sm.design_ai(story,client)
-        image_url =sm.cover_ai(design,client)
+        uploaded_files =sm.cover_ai(design,client)
         
-        st.image(image_url, caption='Style Example', use_column_width=True)
+        st.image(uploaded_files, caption='Style Example', use_column_width=True)
         
         st.write('Generated Image Prompt:')
         st.write(design)
