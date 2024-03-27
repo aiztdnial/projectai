@@ -45,7 +45,7 @@ class StoryMethods:
                 
                 "role": "system", 
                 "content": """Based on the criteria given. 
-                            You will design a detailed image prompt based on user's face structure.
+                            You will design a detailed image prompt based on user's face structure in photo uploaded.
                             The image prompt should include the hairstyle that suitable for them,
                             outfit based on you have advised.
                             The output should be within 100 characters"""
